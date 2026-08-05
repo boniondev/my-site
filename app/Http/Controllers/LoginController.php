@@ -21,12 +21,40 @@
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
-use App\Http\Controllers\LoginController;
-use Illuminate\Support\Facades\Route;
+namespace App\Http\Controllers;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/login', [LoginController::class, 'create']);
-Route::post('/login', [LoginController::class, 'store']);
-Route::post('/logout', [LoginController::class, 'destroy'])->middleware('auth');
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
+class LoginController extends Controller
+{
+    public function create()
+    {
+        return view('login');
+    }
+
+    public function store(Request $request)
+    {
+        $credentials = $request->validate([
+            'username' => ['required'],
+            'password' => ['required'],
+        ]);
+
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+            return redirect('/admin');
+        }
+
+        return back()->withErrors([
+            'error' => 'Invalid credentials'
+        ]);
+    }
+
+    public function destroy(Request $request)
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('/login');
+    }
+}
