@@ -30,3 +30,8 @@ Route::get('/', function () {
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store']);
 Route::post('/logout', [LoginController::class, 'destroy'])->middleware('auth');
+Route::middleware('auth')->group(function () {
+    Route::get('/admin', function () {
+        return view('admin.dashboard');
+    });
+});
