@@ -18,18 +18,23 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program. If not, see <https://www.gnu.org/licenses/>.
 -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Admin Dashboard</title>
-</head>
-<body>
-<h1>Admin Dashboard</h1>
-<p>Welcome, {{ auth()->user()->username }}</p>
-<a href="{{ route('admin.projects.index') }}">Projects</a>
-<form method="POST" action="/logout">
-    @csrf
-    <button type="submit">Logout</button>
-</form>
-</body>
-</html>
+<div id="add-project-modal" hidden>
+    Add Project
+    <form action="{{ route('admin.projects.store') }}" method="POST">
+        @csrf
+        <div>
+            <label for="add-project-modal-title">Title</label>
+            <input type="text" name="title" id="add-project-modal-title" required>
+        </div>
+        <div>
+            <label for="add-project-modal-description">Description</label>
+            <textarea name="description" id="add-project-modal-description"></textarea>
+        </div>
+        <div>
+            <label for="add-project-modal-url">Project URL</label>
+            <input type="url" name="projectURL" id="add-project-modal-url">
+        </div>
+        <button type="submit">Create Project</button>
+        <button type="button" id="add-project-modal-close">Close</button>
+    </form>
+</div>
