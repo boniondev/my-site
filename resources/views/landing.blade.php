@@ -51,8 +51,6 @@
             </p>
         </div>
     </div>
-</body>
-</html>
 <script>
     const disclaimer = document.getElementById("disclaimer")
     const disclaimerAcknowledgeButton = document.getElementById("disclaimer-acknowledge")
@@ -69,3 +67,5 @@
     }
 
 </script>
+</body>
+</html>
