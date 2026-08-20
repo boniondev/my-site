@@ -72,3 +72,7 @@ body {
 .sidebar-hyperlink:link, .sidebar-hyperlink:visited, .sidebar-hyperlink:hover, .sidebar-hyperlink:active {
     color: rgb(212, 174, 255);
 }
+
+a:link, a:visited, a:hover, a:active {
+    color: rgb(255, 255, 255)
+}
