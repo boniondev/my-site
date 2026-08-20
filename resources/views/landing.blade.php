@@ -40,11 +40,16 @@
     </div>
     <div id="content" hidden>
         @include("sidebar")
-        <p>
-            Hello. I am bonion, or boniondev. I am a fan of high level programming, including but not limited to, in no particular order: GDScript, Python, C++, Lua, JS, PHP. <br>
-            I also like to dabble in web development (especially backend), mostly using Laravel, which is what holds this site together. <br>
-            Navigation of the site can be done by using the sidebar on the left. <br>
-        </p>
+        <div id="content-text">
+            <p>
+                Hello. I am bonion, or boniondev. I am a fan of high level programming, including but not limited to, in no particular order: GDScript, Python, C++, Lua, JS, PHP. <br>
+                I dabble in game dev (Godot Engine) and web development (mostly Laravel). <br>
+                I am also interested in multithreading and UDP connectivity.
+            </p>
+            <p>
+                Navigation of the site can be done by using the sidebar on the left.
+            </p>
+        </div>
     </div>
 </body>
 </html>
