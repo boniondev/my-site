@@ -19,6 +19,10 @@
     along with this program. If not, see <https://www.gnu.org/licenses/>.
 */
 
+[hidden] {
+    display: none !important;
+}
+
 @font-face {
     font-family: "0xProto";
     src: url("../fonts/0xProto-Regular.woff2") format("woff2");
