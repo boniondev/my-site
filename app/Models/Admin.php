@@ -1,11 +1,10 @@
 <?php
 
 /**
- * Copyright © 2026 boniondev
- * 
  * This Source Code does not contain AI generated code.
- * The original author does not endorse nor condone downstream edits adding AI generated code.
  * If downstream edits involve AI generated code, please update or remove this header.
+ * 
+ * Copyright © 2026 boniondev
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as
