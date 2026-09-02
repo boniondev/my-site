@@ -27,10 +27,13 @@ use Illuminate\Http\Request;
 
 class ProjectController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+
+    public function index() {
+        $projects = Project::latest()->get();
+        return view('projects.index', ['projects' => $projects]);
+    }
+
+    public function adminIndex()
     {
         $projects = Project::latest()->get();
         return view('admin.projects.index', ['projects' => $projects]);
@@ -56,7 +59,7 @@ class ProjectController extends Controller
     public function show(string $id)
     {
         $project = Project::findOrFail($id);
-        return view('admin.projects.show', ['project' => $project]);
+        return view('projects.show', ['project' => $project]);
     }
 
     /**
