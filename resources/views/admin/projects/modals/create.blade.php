@@ -1,4 +1,4 @@
-<!--
+{{--
     This Source Code does not contain AI generated code.
     If downstream edits involve AI generated code, please update or remove this header.
 
@@ -16,7 +16,7 @@
 
     You should have received a copy of the GNU Affero General Public License
     along with this program. If not, see <https://www.gnu.org/licenses/>.
--->
+--}}
 <div id="add-project-modal" hidden>
     Add Project
     <form action="{{ route('admin.projects.store') }}" method="POST">
