@@ -23,7 +23,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
+    <title>Admin | Projects</title>
 </head>
 <body>
     <button type="button" id="add-project-button">Add Project</button>
