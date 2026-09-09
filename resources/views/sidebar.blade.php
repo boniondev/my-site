@@ -18,5 +18,15 @@
     along with this program. If not, see <https://www.gnu.org/licenses/>.
 --}}
 <nav class="sidebar">
-    <a class="sidebar-hyperlink" href="/">Landing</a>
+    @if (auth()->user() instanceof \App\Models\Admin)
+        <a href="{{ route('admin.dashboard') }}" class="sidebar-hyperlink">Dashboard</a>
+        <a href="{{ route('admin.projects.index') }}" class="sidebar-hyperlink">Projects</a>
+        <a href="{{ route('admin.qa.index') }}" class="sidebar-hyperlink">QA</a>
+        <a href="{{ route('logout') }}" class="sidebar-hyperlink">Logout</a>
+    @else
+        <a href="{{ route('landing') }}" class="sidebar-hyperlink">Landing</a>
+        <a href="{{ route('projects.index') }}" class="sidebar-hyperlink">Projects</a>
+        <a href="{{ route('qa.index') }}" class="sidebar-hyperlink">QA</a>
+        <a href="{{ route('about') }}" class="sidebar-hyperlink">About</a>
+    @endif
 </nav>
