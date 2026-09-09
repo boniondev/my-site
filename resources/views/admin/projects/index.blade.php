@@ -24,8 +24,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin | Projects</title>
+    @vite(['resources/css/app.css'])
 </head>
 <body>
+    <div id="content">
+        @include('sidebar')
+    </div>
     <button type="button" id="add-project-button">Add Project</button>
     @if ( sizeof($projects) > 0 )
     <table>
