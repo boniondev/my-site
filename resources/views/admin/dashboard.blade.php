@@ -19,17 +19,20 @@
 --}}
 @include("license")
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Admin Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Dashboard</title>
+    @vite(['resources/css/app.css'])
 </head>
 <body>
-<h1>Admin Dashboard</h1>
-<p>Welcome, {{ auth()->user()->username }}</p>
-<a href="{{ route('admin.projects.index') }}">Projects</a>
-<form method="POST" action="/logout">
-    @csrf
-    <button type="submit">Logout</button>
-</form>
+    <div id="content">
+        @include('sidebar')
+        <div id="content-text">
+            <h1>Welcome, {{ auth()->user()->username }}</h1><br>
+            {{-- TODO Add something to tell you if you have unanswered questions here --}}
+        </div>
+    </div>
 </body>
 </html>
