@@ -30,6 +30,7 @@ Route::get('/about', function () { return view('about'); })->name('about');
 Route::get('/projects', [ProjectController::class, 'index'])->name('projects.index');
 Route::get('/projects/{project}', [ProjectController::class, 'show'])->name('projects.show');
 Route::get('/qa', [QAController::class, 'index'])->name('qa.index');
+Route::post('/qa', [QAController::class, 'store'])->name('qa.store');
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store']);
 Route::post('/logout', [LoginController::class, 'destroy'])->middleware('auth')->name('logout');
