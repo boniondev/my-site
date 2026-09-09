@@ -24,19 +24,16 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () { return view('landing'); });
-Route::get('/about', function () { return view('about'); });
+Route::get('/', function () { return view('landing'); })->name('landing');
+Route::get('/about', function () { return view('about'); })->name('about');
 Route::get('/projects', [ProjectController::class, 'index'])->name('projects.index');
 Route::get('/projects/{project}', [ProjectController::class, 'show'])->name('projects.show');
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store']);
-Route::post('/logout', [LoginController::class, 'destroy'])->middleware('auth');
-Route::middleware('auth')->group(function () {
-    Route::get('/admin', function () {
-        return view('admin.dashboard');
-    });
-});
+Route::post('/logout', [LoginController::class, 'destroy'])->middleware('auth')->name('logout');
+
 Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
+    Route::get('/', function () { return view('admin.dashboard'); })->name('dashboard');
     Route::get('/projects', [ProjectController::class, 'adminIndex'])->name('projects.index');
     Route::get('/projects/create', [ProjectController::class, 'create'])->name('projects.create');
     Route::post('/projects', [ProjectController::class, 'store'])->name('projects.store');
