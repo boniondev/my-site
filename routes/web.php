@@ -37,7 +37,7 @@ Route::post('/logout', [LoginController::class, 'destroy'])->middleware('auth')-
 Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/', function () { return view('admin.dashboard'); })->name('dashboard');
     Route::get('/projects', [ProjectController::class, 'adminIndex'])->name('projects.index');
-    Route::get('/projects/create', [ProjectController::class, 'create'])->name('projects.create');
+    //Route::get('/projects/create', [ProjectController::class, 'create'])->name('projects.create');
     Route::post('/projects', [ProjectController::class, 'store'])->name('projects.store');
     //Route::get('/projects/{project}', [ProjectController::class, 'show'])->name('projects.show');
     //Route::get('/projects/{project}/edit', [ProjectController::class, 'edit'])->name('projects.edit');
