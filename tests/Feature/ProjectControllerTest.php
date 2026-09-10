@@ -47,7 +47,7 @@ class ProjectControllerTest extends TestCase
 
         $response = $this->get(route('admin.projects.index'));
 
-        $response->assertRedirect(route('login'));
+        $response->assertRedirect(route('login.index'));
 
     }
 
@@ -106,7 +106,7 @@ class ProjectControllerTest extends TestCase
             'projectURL' => fake()->url(),
         ]);
 
-        $response->assertRedirectToRoute('login');
+        $response->assertRedirectToRoute('login.index');
 
     }
 
@@ -134,7 +134,7 @@ class ProjectControllerTest extends TestCase
             'projectURL' => fake()->url(),
         ]);
 
-        $response->assertRedirect(route('login'));
+        $response->assertRedirect(route('login.index'));
 
     }
 
@@ -170,7 +170,7 @@ class ProjectControllerTest extends TestCase
 
         $response = $this->delete(route('admin.projects.destroy', $project->id));
         
-        $response->assertRedirect(route('login'));
+        $response->assertRedirect(route('login.index'));
 
     }
 

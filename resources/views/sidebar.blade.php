@@ -22,7 +22,7 @@
         <a href="{{ route('admin.dashboard') }}" class="sidebar-hyperlink">Dashboard</a>
         <a href="{{ route('admin.projects.index') }}" class="sidebar-hyperlink">Projects</a>
         <a href="{{ route('admin.qa.index') }}" class="sidebar-hyperlink">QA</a>
-        <a href="{{ route('logout') }}" class="sidebar-hyperlink">Logout</a>
+        <a href="{{ route('login.destroy') }}" class="sidebar-hyperlink">Logout</a>
     @else
         <a href="{{ route('landing') }}" class="sidebar-hyperlink">Landing</a>
         <a href="{{ route('projects.index') }}" class="sidebar-hyperlink">Projects</a>
