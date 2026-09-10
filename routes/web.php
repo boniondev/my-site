@@ -33,7 +33,7 @@ Route::get('/qa', [QAController::class, 'index'])->name('qa.index');
 Route::post('/qa', [QAController::class, 'store'])->name('qa.store');
 Route::get('/login', [LoginController::class, 'index'])->name('login.index');
 Route::post('/login', [LoginController::class, 'store'])->name('login.store');
-Route::post('/logout', [LoginController::class, 'destroy'])->middleware('auth')->name('login.destroy');
+Route::delete('/logout', [LoginController::class, 'destroy'])->middleware('auth')->name('login.destroy');
 
 Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/', function () { return view('admin.dashboard'); })->name('dashboard');
