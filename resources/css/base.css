@@ -62,7 +62,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 0.2vw solid white;
+    border: 0.2vw solid gray;
     gap: 0.2vw;
 }
 
@@ -71,7 +71,7 @@ body {
 }
 
 #disclaimer-acknowledge {
-    border: 0.2vw dashed white;
+    border: 0.2vw dashed gray;
     background-color: black;
     color: white;
     align-self: center;
