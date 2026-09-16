@@ -56,6 +56,31 @@ body {
 
 #disclaimer {
     color: rgb(255, 255, 255);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 0.2vw solid white;
+    gap: 0.2vw;
+}
+
+#disclaimer-text {
+    padding: 1em;
+}
+
+#disclaimer-acknowledge {
+    border: 0.2vw dashed white;
+    background-color: black;
+    color: white;
+    align-self: center;
+    width: 15em;
+}
+
+#disclaimer-acknowledge:hover{
+    border: 0.2vw solid white;
+    font-weight: bold;
 }
 
 #content {

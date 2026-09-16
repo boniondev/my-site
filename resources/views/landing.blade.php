@@ -28,14 +28,15 @@
 </head>
 <body>
     <div id="disclaimer">
-        <p>
-            This site requires Javascript to be enabled. <br>
+        <div id="disclaimer-text">
+            This site <b>requires Javascript to be enabled</b>. <br>
             This site does not use cookies. <br>
             This site does not track you nor collect your personal data. <br>
             This site does not obfuscate or minify served HTML, Javascript and CSS. They are human readable. <br>
+            This site prioritizes performance, readability and ease of use over style and may look simplistic. <br>
             This site was built by a human. <br>
             The source code of this site is released under AGPL and can be found <a href="https://github.com/boniondev/my-site" target="_blank" rel="noopener noreferrer">here</a>
-        </p>
+        </div>
         <button type="button" id="disclaimer-acknowledge">I understand</button>
     </div>
     <div id="content" hidden>
