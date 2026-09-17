@@ -107,3 +107,28 @@ body {
 a:link, a:visited, a:hover, a:active {
     color: rgb(255, 255, 255)
 }
+
+.abs-centered-modal {
+    color: white;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 0.2vw solid gray;
+    gap: 2vw;
+}
+
+.styled-button {
+    font-family: '0xProto';
+    color: white;
+    background-color: black;
+    border: 0.1vw solid gray;
+    transition: border-color 0.15s;
+}
+
+.styled-button:hover {
+    font-weight: 700;
+    border-color: white;
+}

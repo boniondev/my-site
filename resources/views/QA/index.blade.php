@@ -48,7 +48,7 @@
 
     const createQaButton = document.getElementById('create-qa-button')
     const createQaModal = document.getElementById('create-qa-modal')
-    const createQaModalQuestion = document.getElementById('create-qa-modal-question')
+    const createQaModalQuestion = document.getElementById('create-qa-modal-question-textarea')
     const createQaModalClose = document.getElementById('create-qa-modal-close')
     createQaButton.addEventListener('click', function () {
         createQaModal.hidden = false

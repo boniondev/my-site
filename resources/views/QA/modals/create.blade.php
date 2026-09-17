@@ -17,14 +17,47 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program. If not, see <https://www.gnu.org/licenses/>.
 --}}
-<div id="create-qa-modal" hidden>
-    <form action="{{ route('qa.store') }}" method="post">
+<style>
+
+    #create-qa-modal-form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2vw;
+        margin: 0.3vw;
+    }
+
+    #create-qa-modal-question-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #create-qa-modal-question-textarea {
+        font-family: '0xProto';
+        font-size: 0.85em;
+        color: white;
+        background-color: black;
+        border: none;
+        resize: none;
+        outline: 0.1vw solid gray;
+        min-height: 5vh;
+        min-width: 15vw;
+    }
+    
+    #create-qa-modal-button-group-div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+</style>
+<div id="create-qa-modal" class="abs-centered-modal" hidden>
+    <form action="{{ route('qa.store') }}" method="post" id="create-qa-modal-form">
         @csrf
-        <div>
-            <label for="create-qa-modal-question">Question</label>
-            <textarea name="question" id="create-qa-modal-question" required></textarea>
+        <div id="create-qa-modal-question-div">
+            <textarea name="question" id="create-qa-modal-question-textarea" placeholder="Write your question here..." required></textarea>
         </div>
-        <button type="submit">Submit Question</button>
-        <button type="button" id="create-qa-modal-close">Close</button>
+        <div id="create-qa-modal-button-group-div">
+            <button type="submit" class="styled-button">Submit Question</button>
+            <button type="button" class="styled-button" id="create-qa-modal-close">Close</button>
+        </div>
     </form>
 </div>
