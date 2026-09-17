@@ -30,7 +30,7 @@
     <div id="content">
         @include('sidebar')
         <div id="content-text">
-            <button type="button" id='create-qa-button'>Submit Question</button>
+            <button type="button" id='create-qa-button' class="styled-button">Submit Question</button>
             @if ( $QA )
                 @foreach ( $QA as $QAEntry )
                     <div class="qa-entry">
