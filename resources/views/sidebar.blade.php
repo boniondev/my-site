@@ -28,5 +28,6 @@
         <a href="{{ route('projects.index') }}" class="sidebar-hyperlink">Projects</a>
         <a href="{{ route('qa.index') }}" class="sidebar-hyperlink">QA</a>
         <a href="{{ route('about') }}" class="sidebar-hyperlink">About</a>
+        <a href="{{ route('pgp') }}" class="sidebar-hyperlink">PGP</a>
     @endif
 </nav>

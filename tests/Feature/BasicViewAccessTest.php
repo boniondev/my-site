@@ -47,4 +47,14 @@ class BasicViewAccessTest extends TestCase
 
     }
 
+    public function test_pgp_access(): void
+    {
+
+        $response = $this->get(route('pgp'));
+
+        $response->assertOk();
+        $response->assertViewIs('pgp');
+
+    }
+
 }

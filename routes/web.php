@@ -31,6 +31,7 @@ Route::get('/projects', [ProjectController::class, 'index'])->name('projects.ind
 Route::get('/projects/{project}', [ProjectController::class, 'show'])->name('projects.show');
 Route::get('/qa', [QAController::class, 'index'])->name('qa.index');
 Route::post('/qa', [QAController::class, 'store'])->name('qa.store');
+Route::get('/pgp', function () { return view('pgp'); })->name('pgp');
 Route::get('/login', [LoginController::class, 'index'])->name('login.index');
 Route::post('/login', [LoginController::class, 'store'])->name('login.store');
 Route::delete('/logout', [LoginController::class, 'destroy'])->middleware('auth')->name('login.destroy');
