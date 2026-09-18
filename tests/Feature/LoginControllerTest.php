@@ -90,4 +90,24 @@ class LoginControllerTest extends TestCase
 
     }
 
+    public function test_login_controller_knock_rate_limit(): void
+    {
+
+        $credentials = [
+            'username' => fake()->userName(),
+            'password' => fake()->password(),
+        ];
+
+        for($i = 0; $i < 3; $i++) {
+            $response = $this->post(route('login.store'), $credentials);
+            $response->assertRedirect(route('login.index'));
+            $response->assertSessionHasErrors('error');
+            assertFalse($this->isAuthenticated());
+        }
+
+        $response = $this->post(route('login.store'), $credentials);
+        $response->assertTooManyRequests();
+
+    }
+
 }
