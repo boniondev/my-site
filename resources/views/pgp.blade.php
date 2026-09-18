@@ -30,7 +30,8 @@
         #pgp-key-div {
             border: 0.2vw solid white;
             width: fit-content;
-            padding: 0.5vw;
+            padding-left: 0.5vw;
+            padding-right: 0.5vw;
         }
 
     </style>
