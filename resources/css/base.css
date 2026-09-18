@@ -105,6 +105,14 @@ body {
     color: rgb(212, 174, 255);
 }
 
+.sidebar-hyperlink-mockup-button {
+    color: rgb(212, 174, 255);
+    background-color: black;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 a:link, a:visited, a:hover, a:active {
     color: rgb(255, 255, 255)
 }

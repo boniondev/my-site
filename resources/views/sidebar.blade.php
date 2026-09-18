@@ -22,7 +22,11 @@
         <a href="{{ route('admin.dashboard') }}" class="sidebar-hyperlink">Dashboard</a>
         <a href="{{ route('admin.projects.index') }}" class="sidebar-hyperlink">Projects</a>
         <a href="{{ route('admin.qa.index') }}" class="sidebar-hyperlink">QA</a>
-        <a href="{{ route('login.destroy') }}" class="sidebar-hyperlink">Logout</a>
+        <form action="{{ route('login.destroy') }}" method="post">
+            @method('delete')
+            @csrf
+            <button type="submit" class="sidebar-hyperlink-mockup-button">Logout</button>
+        </form>
     @else
         <a href="{{ route('landing') }}" class="sidebar-hyperlink">Landing</a>
         <a href="{{ route('projects.index') }}" class="sidebar-hyperlink">Projects</a>
