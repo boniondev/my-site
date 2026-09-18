@@ -24,25 +24,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login</title>
+    @vite(['resources/css/app.css'])
+    <style>
+
+        #login-store-form {
+            padding: 0.4vw;
+        }
+
+    </style>
 </head>
 <body>
 
-<h1>Admin Login</h1>
+    <h1 class="abs-top-centered">Admin Login</h1>
 
-@error('error')
-    <p>{{ $message }}</p>
-@enderror
+    @error('error')
+        <div class="abs-top-25-centered">{{ $message }}</div>
+    @enderror
 
-<form method="POST" action="{{ route('login.store') }}">
-    @csrf
-    <label for="username">Username</label>
-    <input id="username" name="username" type="text" required>
+    <form method="POST" action="{{ route('login.store') }}" id="login-store-form" class="abs-centered-modal">
+        @csrf
+        <div class="flex-column">
+            <label for="username" class="styled-label">Username</label>
+            <input id="username" class="styled-input" name="username" type="text" required>
+        </div>
 
-    <label for="password">Password</label>
-    <input id="password" name="password" type="password" required>
+        <div class="flex-column">
+            <label for="password" class="styled-label">Password</label>
+            <input id="password" class="styled-input" name="password" type="password" required>
+        </div>
 
-    <button type="submit">Login</button>
-</form>
+        <button type="submit" class="styled-button">Login</button>
+    </form>
 
 </body>
 </html>
