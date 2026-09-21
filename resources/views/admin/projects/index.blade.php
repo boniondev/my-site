@@ -29,41 +29,43 @@
 <body>
     <div id="content">
         @include('sidebar')
+        <div id="content-text">
+            <button type="button" id="add-project-button" class="styled-button">Add Project</button>
+            @if ( sizeof($projects) > 0 )
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>URL</th>
+                    <th>Actions</th>
+                </tr>
+            @foreach ( $projects as $project )
+            <tr>
+                <td>{{ $project->id }}</td>
+                <td>{{ $project->title }}</td>
+                <td>{{ $project->description }}</td>
+                <td>{{ $project->projectURL }}</td>
+                <td><button
+                        type="button"
+                        class="edit-project-button"
+                        data-project-id="{{ $project->id }}"
+                        data-project-title="{{ $project->title }}"
+                        data-project-description="{{ $project->description }}"
+                        data-project-url="{{ $project->projectURL }}"
+                    >Edit</button>
+                    <form action="{{ route('admin.projects.destroy', $project->id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            @endforeach
+            </table>
+            @endif
+        </div>
     </div>
-    <button type="button" id="add-project-button">Add Project</button>
-    @if ( sizeof($projects) > 0 )
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Description</th>
-            <th>URL</th>
-            <th>Actions</th>
-        </tr>
-    @foreach ( $projects as $project )
-    <tr>
-        <td>{{ $project->id }}</td>
-        <td>{{ $project->title }}</td>
-        <td>{{ $project->description }}</td>
-        <td>{{ $project->projectURL }}</td>
-        <td><button
-                type="button"
-                class="edit-project-button"
-                data-project-id="{{ $project->id }}"
-                data-project-title="{{ $project->title }}"
-                data-project-description="{{ $project->description }}"
-                data-project-url="{{ $project->projectURL }}"
-            >Edit</button>
-            <form action="{{ route('admin.projects.destroy', $project->id) }}" method="POST">
-                @csrf
-                @method('DELETE')
-                <button type="submit">Delete</button>
-            </form>
-        </td>
-    </tr>
-    @endforeach
-    </table>
-    @endif
 @include('admin.projects.modals.create')
 @include('admin.projects.modals.edit')
 </body>
