@@ -42,11 +42,6 @@
         min-height: 5vh;
         min-width: 15vw;
     }
-    
-    #create-qa-modal-button-group-div {
-        display: flex;
-        justify-content: space-between;
-    }
 
 </style>
 <div id="create-qa-modal" class="abs-centered-modal" hidden>
@@ -55,7 +50,7 @@
         <div id="create-qa-modal-question-div">
             <textarea name="question" id="create-qa-modal-question-textarea" placeholder="Write your question here..." required></textarea>
         </div>
-        <div id="create-qa-modal-button-group-div">
+        <div class="modal-button-group-div">
             <button type="submit" class="styled-button">Submit Question</button>
             <button type="button" class="styled-button" id="create-qa-modal-close">Close</button>
         </div>

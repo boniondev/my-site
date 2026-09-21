@@ -177,3 +177,8 @@ a:link, a:visited, a:hover, a:active {
     top: 25%;
     transform: translate(-50%, -50%);
 }
+
+.modal-button-group-div {
+    display: flex;
+    justify-content: space-between;
+}
