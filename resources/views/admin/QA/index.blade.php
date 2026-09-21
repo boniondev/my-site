@@ -78,7 +78,7 @@
     })
     editQaButtons.forEach(function (button) {
         button.addEventListener('click', function () {
-            editQaModal = false
+            editQaModal.hidden = false
             editQaModalForm.action = `{{ route('admin.qa.update', '__QA_ID__') }}`.replace('__QA_ID__', button.dataset.qaentryId)
             editQaModalQuestion.value = button.dataset.qaentryQuestion
             editQaModalAnswer.value = button.dataset.qaentryAnswer
