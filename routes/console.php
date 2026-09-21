@@ -8,6 +8,4 @@ Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote');
 
-Schedule::call(function () {
-    DB::table(config('cache.stores.database.table'))->where('expiration', '<=', now()->timestamp)->delete();
-})->everyTenMinutes();
+Schedule::call('app:cleanup-expired-rate-limit-cache')->everyTenMinutes();
