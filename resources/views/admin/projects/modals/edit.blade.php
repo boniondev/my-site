@@ -17,24 +17,34 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program. If not, see <https://www.gnu.org/licenses/>.
 --}}
-<div id="edit-project-modal" hidden>
+<style>
+
+    .modal-button-group-div {
+        margin-top: 0.2vw;
+        margin-bottom: 0.2vw;
+    }
+
+</style>
+<div id="edit-project-modal" class="abs-centered-modal" hidden>
     Edit Project
     <form id="edit-project-modal-form" method="POST">
         @csrf
         @method('PUT')
-        <div>
+        <div class="modal-label-input-group-div">
             <label for="edit-project-modal-title">Title</label>
-            <input type="text" name="title" id="edit-project-modal-title" required>
+            <input type="text" name="title" id="edit-project-modal-title" class="styled-input" required>
         </div>
-        <div>
+        <div class="modal-label-input-group-div">
             <label for="edit-project-modal-description">Description</label>
-            <textarea name="description" id="edit-project-modal-description"></textarea>
+            <textarea name="description" id="edit-project-modal-description" class="styled-input"></textarea>
         </div>
-        <div>
+        <div class="modal-label-input-group-div">
             <label for="edit-project-modal-url">Project URL</label>
-            <input type="url" name="projectURL" id="edit-project-modal-url">
+            <input type="url" name="projectURL" id="edit-project-modal-url" class="styled-input">
         </div>
-        <button type="submit">Edit Project</button>
-        <button type="button" id="edit-project-modal-close">Close</button>
+        <div class="modal-button-group-div">
+            <button type="submit" class="styled-button">Edit Project</button>
+            <button type="button" id="edit-project-modal-close" class="styled-button">Close</button>
+        </div>
     </form>
 </div>
