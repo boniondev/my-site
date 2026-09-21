@@ -17,24 +17,24 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program. If not, see <https://www.gnu.org/licenses/>.
 --}}
-<div id="edit-qa-modal" hidden>
+<div id="edit-qa-modal" class="abs-centered-modal" hidden>
     Edit QA
     <form id="edit-qa-modal-form" method="post">
         @csrf
         @method('PUT')
-        <div>
+        <div class="modal-label-input-group-div">
             <div>Question</div>
             <div id="edit-qa-modal-question"></div>
         </div>
-        <div>
+        <div class="modal-label-input-group-div">
             <label for="edit-qa-modal-answer">Answer</label>
-            <textarea name="answer" id="edit-qa-modal-answer"></textarea>
+            <textarea name="answer" id="edit-qa-modal-answer" class="styled-input"></textarea>
         </div>
         <div>
             <label for="edit-qa-modal-hidden">Hidden?</label>
             <input type="checkbox" name="hidden" id="edit-qa-modal-hidden">
         </div>
-        <button type="submit">Save QA</button>
-        <button type="button" id="edit-qa-modal-cancel">Cancel</button>
+        <button type="submit" class="styled-button">Save QA</button>
+        <button type="button" id="edit-qa-modal-cancel" class="styled-button">Cancel</button>
     </form>
 </div>
