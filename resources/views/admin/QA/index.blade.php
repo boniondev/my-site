@@ -39,7 +39,7 @@
                         hidden:<input type=checkbox {{ $QAEntry->hidden ? 'checked' : '' }}><br>
                         <button 
                             type="button"
-                            class="edit-qaentry-button"
+                            class="edit-qaentry-button styled-button"
                             data-qaentry-id="{{ $QAEntry->id }}"
                             data-qaentry-question="{{ $QAEntry->question }}"
                             data-qaentry-answer="{{ $QAEntry->answer }}"
@@ -48,7 +48,7 @@
                         <form action="{{ route('admin.qa.destroy', $QAEntry->id) }}" method="post">
                             @csrf
                             @method('DELETE')
-                            <button type="submit">Delete</button>
+                            <button type="submit" class="styled-button">Delete</button>
                         </form>
                     </div>
                 @endforeach
