@@ -25,6 +25,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin | Projects</title>
     @vite(['resources/css/app.css'])
+    <style>
+
+        table, td, th, tr {
+            border: 0.1vw solid white;
+            border-collapse: collapse;
+        }
+
+    </style>
 </head>
 <body>
     <div id="content">
@@ -48,7 +56,7 @@
                 <td>{{ $project->projectURL }}</td>
                 <td><button
                         type="button"
-                        class="edit-project-button"
+                        class="edit-project-button styled-button"
                         data-project-id="{{ $project->id }}"
                         data-project-title="{{ $project->title }}"
                         data-project-description="{{ $project->description }}"
@@ -57,7 +65,7 @@
                     <form action="{{ route('admin.projects.destroy', $project->id) }}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <button type="submit">Delete</button>
+                        <button type="submit" class="styled-button">Delete</button>
                     </form>
                 </td>
             </tr>
