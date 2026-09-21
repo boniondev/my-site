@@ -30,7 +30,7 @@ Route::get('/about', function () { return view('about'); })->name('about');
 Route::get('/projects', [ProjectController::class, 'index'])->name('projects.index');
 Route::get('/projects/{project}', [ProjectController::class, 'show'])->name('projects.show');
 Route::get('/qa', [QAController::class, 'index'])->name('qa.index');
-Route::post('/qa', [QAController::class, 'store'])->name('qa.store');
+Route::post('/qa', [QAController::class, 'store'])->name('qa.store')->middleware('throttle:1,1440');
 Route::get('/pgp', function () { return view('pgp'); })->name('pgp');
 Route::get('/login', [LoginController::class, 'index'])->name('login.index');
 Route::post('/login', [LoginController::class, 'store'])->name('login.store')->middleware('throttle:3,1');
