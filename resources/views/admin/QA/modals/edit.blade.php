@@ -28,7 +28,7 @@
         </div>
         <div>
             <label for="edit-qa-modal-answer">Answer</label>
-            <textarea name="answer" id="edit-qa-modal-anwer"></textarea>
+            <textarea name="answer" id="edit-qa-modal-answer"></textarea>
         </div>
         <div>
             <label for="edit-qa-modal-hidden">Hidden?</label>
