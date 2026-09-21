@@ -182,3 +182,8 @@ a:link, a:visited, a:hover, a:active {
     display: flex;
     justify-content: space-between;
 }
+
+.modal-label-input-group-div {
+    display: flex;
+    flex-direction: column;
+}

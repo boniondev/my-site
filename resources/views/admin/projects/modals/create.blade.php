@@ -17,23 +17,24 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program. If not, see <https://www.gnu.org/licenses/>.
 --}}
-<div id="add-project-modal" hidden>
-    Add Project
+<div id="add-project-modal" class="abs-centered-modal" hidden>
     <form action="{{ route('admin.projects.store') }}" method="POST">
         @csrf
-        <div>
+        <div class="modal-label-input-group-div">
             <label for="add-project-modal-title">Title</label>
-            <input type="text" name="title" id="add-project-modal-title" required>
+            <input type="text" name="title" id="add-project-modal-title" class="styled-input" required>
         </div>
-        <div>
+        <div class="modal-label-input-group-div">
             <label for="add-project-modal-description">Description</label>
-            <textarea name="description" id="add-project-modal-description"></textarea>
+            <textarea name="description" id="add-project-modal-description" class="styled-input" ></textarea>
         </div>
-        <div>
+        <div class="modal-label-input-group-div">
             <label for="add-project-modal-url">Project URL</label>
-            <input type="url" name="projectURL" id="add-project-modal-url">
+            <input type="url" name="projectURL" id="add-project-modal-url" class="styled-input" >
         </div>
-        <button type="submit">Create Project</button>
-        <button type="button" id="add-project-modal-close">Close</button>
+        <div class="modal-button-group-div">
+            <button type="submit" class="styled-button">Create Project</button>
+            <button type="button" id="add-project-modal-close" class="styled-button" >Close</button>
+        </div>
     </form>
 </div>
