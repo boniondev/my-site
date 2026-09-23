@@ -32,24 +32,26 @@
         <div id="content-text">
             @if ( $QA )
                 @foreach ( $QA as $QAEntry )
-                    <div class="QAEntry">
-                        {{ $QAEntry->id }}<br>
-                        {{ $QAEntry->question }}<br>
-                        @if($QAEntry->answer) {{ $QAEntry->answer }}<br> @endif
-                        hidden:<input type=checkbox {{ $QAEntry->hidden ? 'checked' : '' }}><br>
-                        <button 
-                            type="button"
-                            class="edit-qaentry-button styled-button"
-                            data-qaentry-id="{{ $QAEntry->id }}"
-                            data-qaentry-question="{{ $QAEntry->question }}"
-                            data-qaentry-answer="{{ $QAEntry->answer }}"
-                            data-qaentry-hidden="{{ $QAEntry->hidden }}"
-                        >Edit</button>
-                        <form action="{{ route('admin.qa.destroy', $QAEntry->id) }}" method="post">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="styled-button">Delete</button>
-                        </form>
+                    <div class="qa-entry">
+                        <div class="qa-entry-id">ID: {{ $QAEntry->id }}</div>
+                        <div>Q: {{ $QAEntry->question }}</div>
+                        <div>A: @if ($QAEntry->answer) {{ $QAEntry->answer }} @endif</div>
+                        <div>hidden: {{ $QAEntry->hidden ? 'yes' : 'no' }}</div>
+                        <div class="qa-entry-buttons">
+                            <button 
+                                type="button"
+                                class="edit-qaentry-button styled-button"
+                                data-qaentry-id="{{ $QAEntry->id }}"
+                                data-qaentry-question="{{ $QAEntry->question }}"
+                                data-qaentry-answer="{{ $QAEntry->answer }}"
+                                data-qaentry-hidden="{{ $QAEntry->hidden }}"
+                            >Edit</button>
+                            <form action="{{ route('admin.qa.destroy', $QAEntry->id) }}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="styled-button">Delete</button>
+                            </form>
+                        </div>
                     </div>
                 @endforeach
             @else

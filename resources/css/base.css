@@ -187,3 +187,19 @@ a:link, a:visited, a:hover, a:active {
     display: flex;
     flex-direction: column;
 }
+
+.qa-entry {
+    display: flex;
+    flex-direction: column;
+    border: 0.1vw solid white;
+    padding: 0.2vw;
+}
+
+.qa-entry-id {
+    margin-right: 80%;
+}
+
+.qa-entry-buttons {
+    display: flex;
+    justify-content: space-between;
+}
