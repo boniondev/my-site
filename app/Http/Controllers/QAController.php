@@ -63,8 +63,12 @@ class QAController extends Controller
             'answer' => ['required', 'string'],
             'hidden' => ['required', 'boolean'],
         ]);
-        QA::findOrFail($id)->update($validated);
-        return redirect()->route('admin.qa.index')->with('success', 'QA updated successfully');
+        $success = QA::findOrFail($id)->update($validated);
+        if ($success) {
+            return redirect()->route('admin.qa.index')->with('success', 'QA updated successfully');
+        } else {
+            return redirect()->route('admin.qa.index')->with('error', 'QA update failed');
+        }
     }
 
     public function destroy(string $id)
