@@ -82,7 +82,7 @@
             editQaModalForm.action = `{{ route('admin.qa.update', '__QA_ID__') }}`.replace('__QA_ID__', button.dataset.qaentryId)
             editQaModalQuestion.textContent = button.dataset.qaentryQuestion
             editQaModalAnswer.value = button.dataset.qaentryAnswer
-            editQaModalHidden.value = button.dataset.qaentryHidden === '1' ? 'hidden' : ''
+            editQaModalHidden.checked = button.dataset.qaentryHidden === '1' ? true : false
         })
     })
 
