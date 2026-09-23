@@ -72,7 +72,7 @@
     const editQaButtons = document.querySelectorAll('.edit-qaentry-button')
     editQaModalCancelButton.addEventListener('click', function() {
         editQaModal.hidden = true
-        editQaModalQuestion.value = ''
+        editQaModalQuestion.textContent = ''
         editQaModalAnswer.value = ''
         editQaModalHidden.checked = false
     })
