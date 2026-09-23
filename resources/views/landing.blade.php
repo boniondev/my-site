@@ -30,7 +30,7 @@
     <div id="disclaimer">
         <div id="disclaimer-text">
             This site <b>requires Javascript to be enabled</b>. <br>
-            This site does not use cookies. <br>
+            This site uses cookies strictly for CSRF protection. No tracking is performed. No analytics is collected. <br>
             This site can <b>collect and store your hashed IP for up to 24 hours</b> to enforce rate limiting. After such time limit expires, the record is removed within 10 minutes.<br>
             This site does not obfuscate or minify served HTML, Javascript and CSS. They are human readable. <br>
             This site prioritizes performance, readability and ease of use over style and may look simplistic. <br>
