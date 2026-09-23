@@ -25,6 +25,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QA</title>
     @vite(['resources/css/app.css'])
+    <style>
+
+        #create-qa-button {
+            margin-top: 0.8vh;
+            margin-bottom: 0.8vh;
+        }
+
+    </style>
 </head>
 <body>
     <div id="content">
@@ -34,8 +42,8 @@
             @if ( $QA )
                 @foreach ( $QA as $QAEntry )
                     <div class="qa-entry">
-                        {{ $QAEntry->question }}<br>
-                        {{ $QAEntry->answer }}<br>
+                        <div>Q: {{ $QAEntry->question }}</div>
+                        <div>A: {{ $QAEntry->answer }}</div>
                     </div>
                 @endforeach
             @endif
