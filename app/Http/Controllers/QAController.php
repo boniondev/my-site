@@ -59,6 +59,11 @@ class QAController extends Controller
 
     public function update(Request $request, string $id)
     {
+
+        $request->merge([
+            'hidden' => $request->boolean('hidden'),
+        ]);
+
         $validated = $request->validate([
             'answer' => ['required', 'string'],
             'hidden' => ['required', 'boolean'],
