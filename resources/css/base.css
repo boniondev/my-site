@@ -96,17 +96,19 @@ body {
     flex-direction: column;
     height: 98vh;
     width: 5vw;
-    border-right: 0.25vw solid rgb(255, 255, 255);
+    background: linear-gradient(to right, white, black 100%);
     align-items: center;
     font-size: 1rem;
 }
 
 .sidebar-hyperlink:link, .sidebar-hyperlink:visited, .sidebar-hyperlink:hover, .sidebar-hyperlink:active {
     color: rgb(212, 174, 255);
+    mix-blend-mode: difference;
 }
 
 .sidebar-hyperlink-mockup-button {
     color: rgb(212, 174, 255);
+    mix-blend-mode: difference;
     background-color: black;
     border: none;
     text-decoration: underline;
