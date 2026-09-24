@@ -41,6 +41,7 @@
         @include('sidebar')
         <div id="content-text">
             Below is my PGP key. As of 2026/09/15, I use it for most things that accept or require PGP keys (Git commit signing, AUR profile PGP fingerprint)<br>
+            The key us also available under <a href="http://keyserver.ubuntu.com" target="_blank" rel="noreferrer">keyserver.ubuntu.com</a>.<br>
             <?php $metadata = json_decode(file_get_contents(public_path('key/metadata.json')),true) ?>
             Fingerprint: <?= $metadata['fingerprint'] ?><br>
             <div id="pgp-key-div">
