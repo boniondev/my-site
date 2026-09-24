@@ -210,3 +210,15 @@ a:link, a:visited, a:hover, a:active {
     display: flex;
     justify-content: space-between;
 }
+
+#project-container {
+    display: grid;
+    grid-template-columns: auto;
+    margin-top: 2vh;
+}
+
+.project-link {
+    padding: 0.5vw;
+    border: 0.2vw solid white;
+    text-decoration: none;
+}
