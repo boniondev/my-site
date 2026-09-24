@@ -35,7 +35,7 @@
             This site does not obfuscate or minify served HTML, Javascript and CSS. They are human readable. <br>
             This site prioritizes performance, readability and ease of use over style and may look simplistic. <br>
             This site was built by a human. <br>
-            The source code of this site is released under AGPL and can be found <a href="https://github.com/boniondev/my-site" target="_blank" rel="noopener noreferrer">here</a>
+            The source code of this site is released under AGPL and can be found <a href="https://github.com/boniondev/my-site" target="_blank" rel="noreferrer">here</a>
         </div>
         <button type="button" id="disclaimer-acknowledge">I understand</button>
     </div>
