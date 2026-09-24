@@ -36,6 +36,10 @@
                     <a href="{{ route('projects.show', $project->id) }}" class="project-link">{{ $project->title }}</a>
                 @endforeach
             </div>
+            @else
+                <div class="abs-top-50-centered">
+                    There are no projects to show.
+                </div>
             @endif
         </div>
     </div>
