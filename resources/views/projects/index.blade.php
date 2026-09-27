@@ -30,6 +30,7 @@
     <div id="content">
         @include("sidebar")
         <div id="content-text">
+            These are projects I have created. Some may be unfinished or may not work, but the code within may be used according to the license located inside the repository.
             @if ( sizeof($projects) > 0 )
             <div id="project-container">
                 @foreach ( $projects as $project )
