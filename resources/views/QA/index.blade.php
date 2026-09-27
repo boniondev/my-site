@@ -38,7 +38,8 @@
     <div id="content">
         @include('sidebar')
         <div id="content-text">
-            You may ask a question here, and it will be answered, eventually. You may ask anything within reason, but there is a limit to one every 24 hours.<br>
+            You may ask a question here, and when it receives an answer, it will appear here.<br>
+            You may ask anything within reason, but there is a limit to one every 24 hours. Questions are otherwise anonymous.<br>
             <button type="button" id='create-qa-button' class="styled-button">Submit Question</button>
             @if ( $QA )
                 @foreach ( $QA as $QAEntry )
