@@ -32,7 +32,7 @@
         <div id="content-text">
             @if ( $project )
                 <h1>{{ $project->title ?? 'No project was selected'}}</h1><br>
-                @if ( $project->description ) <p>{{ $project->description }}</p><br>@endif
+                @if ( $project->description ) <p>{!! nl2br($project->description) !!}</p><br>@endif
                 @if ( $project->projectURL ) The project is available <a href="{{ $project->projectURL }}">here</a>. @endif
             @else
                 <h1>No project was selected</h1>
