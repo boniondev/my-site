@@ -203,6 +203,8 @@ a:link, a:visited, a:hover, a:active {
     flex-direction: column;
     border: 0.1vw solid white;
     padding: 0.2vw;
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
 }
 
 .qa-entry-id {
