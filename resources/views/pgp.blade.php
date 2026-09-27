@@ -53,5 +53,6 @@
             </div>
         </div>
     </div>
+@vite('resources/js/disclaimerRedirect.js')
 </body>
 </html>

@@ -50,6 +50,7 @@
         </div>
     </div>
 @include('QA.modals.create')
+@vite('resources/js/disclaimerRedirect.js')
 </body>
 </html>
 <script>
