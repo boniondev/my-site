@@ -56,14 +56,14 @@
     const disclaimer = document.getElementById("disclaimer")
     const disclaimerAcknowledgeButton = document.getElementById("disclaimer-acknowledge")
     const content = document.getElementById("content")
-    if (localStorage.getItem("disclaimer_acknowledged") === "1")  {
+    if (localStorage.getItem("disclaimer_acknowledged"))  {
         disclaimer.remove()
         content.hidden = false
     } else {
         disclaimerAcknowledgeButton.addEventListener('click', function () {
             disclaimer.remove()
             content.hidden = false
-            localStorage.setItem("disclaimer_acknowledged", "1")
+            localStorage.setItem("disclaimer_acknowledged", true)
         })
     }
 
