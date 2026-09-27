@@ -45,7 +45,7 @@
                 @foreach ( $QA as $QAEntry )
                     <div class="qa-entry">
                         <div>Q: {!! nl2br(e($QAEntry->question)) !!}</div>
-                        <div>A: {{ $QAEntry->answer }}</div>
+                        <div>A: {!! nl2br(e($QAEntry->answer)) !!}</div>
                     </div>
                 @endforeach
             @endif
