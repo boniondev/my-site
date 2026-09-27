@@ -216,7 +216,7 @@ a:link, a:visited, a:hover, a:active {
 
 #project-container {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 20vw 20vw 20vw 20vw;
     text-align: center;
     margin-top: 2vh;
 }
