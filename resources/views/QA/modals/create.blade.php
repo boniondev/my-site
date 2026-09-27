@@ -37,7 +37,6 @@
         color: white;
         background-color: black;
         border: none;
-        resize: none;
         outline: 0.1vw solid gray;
         min-height: 5vh;
         min-width: 15vw;
